@@ -2,23 +2,23 @@
 
 namespace Database\Seeders;
 
-use App\Models\House;
+use App\Models\Estate;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class HouseSeeder extends Seeder
+class EstateSeeder extends Seeder
 {
     /**
      * Run the database seeds.
      */
     public function run(): void
     {
-        House::truncate();
+        Estate::truncate();
         $csvFile = fopen(base_path("database/csv/houses-dataset.csv"), "r");
         $firstLine = true;
         while (($data = fgetcsv($csvFile, 2000, ",")) !== false) {
             if (!$firstLine) {
-                House::create([
+                Estate::create([
                     "broker"            =>      $data['0'],
                     "type"              =>      $data['1'],
                     "price"             =>      $data['2'],

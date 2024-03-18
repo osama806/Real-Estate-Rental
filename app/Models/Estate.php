@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class House extends Model
+class Estate extends Model
 {
     use HasFactory;
 
@@ -19,6 +19,8 @@ class House extends Model
         "state",
         "locality",
         "sub_locality",
-        "street_name"
+        "street_name",
+        "reserved",
+        "rented"
     ];
 }
