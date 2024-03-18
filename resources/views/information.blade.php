@@ -13,18 +13,18 @@
 <body class="bg-secondary ">
     <section class="section">
         <div class="container">
-            @foreach ($houses as $house)
+            @foreach ($estates as $estate)
                 <div class="card my-3 ">
                     <div class="card-header bg-dark text-light ">
                         <h1 class="card-title">
-                            Type of estate: {{ $house->type }}
+                            Type of estate: {{ $estate->type }}
                         </h1>
                     </div>
                     <div class="card-body">
-                        <h3>Number of beds: {{ $house->beds }} </h3>
-                        <h5>Price: {{ $house->price }} </h5>
-                        <h5>Locality: {{ $house->locality }} </h5>
-                        <h5>Broker(if found): {{ $house->broker }} </h5>
+                        <h3>Number of beds: {{ $estate->beds }} </h3>
+                        <h5>Price: {{ $estate->price }} </h5>
+                        <h5>Locality: {{ $estate->locality }} </h5>
+                        <h5>Broker(if found): {{ $estate->broker }} </h5>
                     </div>
                 </div>
             @endforeach

@@ -2,16 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\House;
+use App\Models\Estate;
 use Illuminate\Http\Request;
 
-class HouseController extends Controller
+class EstateController extends Controller
 {
     public function index()
     {
-        $houses = House::all();
+        $estates = Estate::all();
         $data = [
-            "houses"        =>      $houses
+            "estates"        =>      $estates
         ];
         return view(view: "information", data: $data);
     }
