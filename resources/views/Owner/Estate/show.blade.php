@@ -33,10 +33,8 @@
           @endif
           <h6 class="mb-4">Reserved: {{ $estate->reserved }} </h6>
           <h6 class="mb-4">Rented: {{ $estate->rented }} </h6>
-          <button type="button" class="btn btn-primary px-5">Reserve</button>
-          <button type="button" class="btn btn-success">Signing a contract</button>
           <a href="{{ route('estates.edit', $estate->id) }}" class="text-decoration-none"><button type="button"
-              class="btn btn-secondary px-5 ">Edit</button></a>
+              class="btn btn-success px-5 ">Edit</button></a>
           <form action="{{ route('estates.destroy', $estate->id) }}" method="POST" class="d-inline-block ">
             @csrf
             @method('DELETE')

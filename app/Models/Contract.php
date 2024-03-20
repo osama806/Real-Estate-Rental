@@ -19,8 +19,8 @@ class Contract extends Model
         "extension"
     ];
 
-    public function user(): BelongsTo
+    public function client(): BelongsTo
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(Client::class);
     }
 }
