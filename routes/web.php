@@ -1,13 +1,14 @@
 <?php
 
-use App\Http\Controllers\EstateController;
+use App\Http\Controllers\Owner\EstateController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-Route::get("/info", [EstateController::class, "index"]);
+Route::get("newPrices", [EstateController::class, "cleanPrice"]);
 
+Route::resource("estates", EstateController::class);
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
@@ -28,4 +29,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';
