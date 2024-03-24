@@ -25,9 +25,9 @@ class Estate extends Model
         "rented"
     ];
 
-    public function client(): BelongsTo
+    public function user(): BelongsTo
     {
-        return $this->belongsTo(Client::class);
+        return $this->belongsTo(User::class);
     }
 
     public function owner(): BelongsTo

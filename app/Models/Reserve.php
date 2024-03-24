@@ -17,8 +17,8 @@ class Reserve extends Model
         "expired_date"
     ];
 
-    public function client(): BelongsTo
+    public function user(): BelongsTo
     {
-        return $this->belongsTo(Client::class);
+        return $this->belongsTo(User::class);
     }
 }
