@@ -69,6 +69,7 @@ class EstateController extends Controller
             "locality"          =>      $request->locality,
             "sub_locality"      =>      $request->sub_locality,
             "street"            =>      $request->street_name,
+            "owner"             =>      auth()->user()->name,
             "reserved"          =>      "no",
             "rented"            =>      "no"
         ]);
